@@ -28,7 +28,8 @@ const [products, setProducts] = useState([]);
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_API_URL;
     console.log(import.meta.env.VITE_API_URL);
-     axios.get(`${apiUrl}/api/product`) 
+    console.log(apiUrl);
+    axios.get(`${apiUrl}/api/product`) 
       .then((res) => res.json())
       .then((data) => {
         console.log(data); // Debug purpose
