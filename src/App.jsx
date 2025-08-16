@@ -26,11 +26,13 @@ const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_API_URL;
+    console.log(import.meta.env.VITE_API_URL);
      axios.get(`${apiUrl}/api/product`) 
       .then((res) => res.json())
       .then((data) => {
         console.log(data); // Debug purpose
         setProducts(data);
+        
       })
       .catch((err) => console.log("Error fetching products:", err));
   }, []);
