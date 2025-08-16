@@ -32,7 +32,7 @@ const [products, setProducts] = useState([]);
         console.log(data); // Debug purpose
         setProducts(data);
       })
-      .catch((err) => console.error("Error fetching products:", err));
+      .catch((err) => <console className="log"></console>("Error fetching products:", err));
   }, []);
 
   return (

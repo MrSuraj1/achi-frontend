@@ -76,9 +76,9 @@ export default function Cate() {
   return (
     <>
       <h1 className="text-2xl ml-4 font-semibold mt-4">Kids</h1>
-      <div className="flex flex-wrap">
+      <div className="grid grid-cols-2  md:flex flex-wrap">
         {product.map((item) => (
-          <div key={item.id} className="m-2 w-60">
+          <div key={item.id} className="m-2 w-60 grid-cols-2">
             <img
               className="w-[400px] rounded "
               src={item.src}
