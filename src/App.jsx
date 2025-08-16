@@ -16,6 +16,7 @@ import Detail from './componet/detail.jsx';
 import Checkout from "./user/checkout.jsx";
 import Booked from './user/booked.jsx';
 import Order from './admin/order.jsx';
+import axios from 'axios';
 
 
 
