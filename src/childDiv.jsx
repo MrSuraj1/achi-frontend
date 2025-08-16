@@ -4,6 +4,8 @@ import { BsCartPlus } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import API from "./api";
 import Cate from "./user/categori";
+import axios from "axios";
+
 function ChildrenProducts() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -16,17 +18,18 @@ function ChildrenProducts() {
 
 
   // ✅ Fetch products on page load
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await API.get("/product");
-        setProducts(response.data);
-      } catch (error) {
-        console.error(error);
-        alert("Error fetching products");
-      }
-    };
-    fetchData();
+useEffect(() => {
+    const apiUrl = import.meta.env.VITE_API_URL;
+    console.log("API URL 👉", apiUrl); // must log Render URL
+
+    axios.get(`${apiUrl}/api/product`)
+      .then((res) => {
+        console.log("Products:", res.data);
+        setProducts(res.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching products:", err);
+      });
   }, []);
 
   const handleAddToCart = async (item) => {

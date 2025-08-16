@@ -25,19 +25,19 @@ import axios from 'axios';
 function App() {
 const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL;
-    console.log(import.meta.env.VITE_API_URL);
-    console.log(apiUrl);
-    axios.get(`${apiUrl}/api/product`) 
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data); // Debug purpose
-        setProducts(data);
-        
-      })
-      .catch((err) => console.log("Error fetching products:", err));
-  }, []);
+useEffect(() => {
+  const apiUrl = import.meta.env.VITE_API_URL; // this should point to Render URL
+  console.log(apiUrl); // must log https://achi-backend.onrender.com
+ console.log(import.meta.env.VITE_API_URL)
+  axios.get(`${apiUrl}/api/product`)
+  .then((res) => {
+    console.log(res.data);   // ✅ axios gives data directly
+    setProducts(res.data);
+  })
+  .catch((err) => {
+    console.error("Error fetching products:", err);
+  });
+}, []);
 
   return (
     <>
