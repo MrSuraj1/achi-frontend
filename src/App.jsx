@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import Notice from './notice';
 import Home from './Home';
 import Slider from './slider';
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from './assets/Footer.jsx';
 import Login from './user/login.jsx';
