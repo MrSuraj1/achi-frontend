@@ -42,7 +42,7 @@ const [loading, setLoading] = useState(true);
   }, []);
 
    if (loading) {
-    return <Loader />; 
+    return <Loader />; // loader here
   }
 
   const handleAddToCart = async (item) => {

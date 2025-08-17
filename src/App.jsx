@@ -17,7 +17,10 @@ import Checkout from "./user/checkout.jsx";
 import Booked from './user/booked.jsx';
 import Order from './admin/order.jsx';
 import axios from 'axios';
-import PageNotFound from './componet/page.jsx';
+
+
+
+
 
 function App() {
 const [products, setProducts] = useState([]);
@@ -55,8 +58,7 @@ useEffect(() => {
             <Route path="/checkout" element={<Checkout />} />
              <Route path="/booked" element={<Booked />} />
              <Route path="/admin" element={<Order />} />
-            <Route path='*'  element={<PageNotFound />} />          
-                   
+            
               </Routes>
        
        <Footer />

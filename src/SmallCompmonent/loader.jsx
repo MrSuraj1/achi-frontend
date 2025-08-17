@@ -3,8 +3,7 @@ import { useState } from "react"
 export default function Loader(){
 
  const [loader ,setLoading] = useState(true);   
-     
-
+    
  return (
         <>
          <div className="flex justify-center items-center mt-14">

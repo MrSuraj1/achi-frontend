@@ -14,7 +14,7 @@ function Home() {
         <div className="flex flex-col md:flex-row gap-1 ">
           <div className="flex-1 bg-blue-100 border p-4 " >
             <img
-              src="https://chombooka.com/cdn/shop/collections/Christmas_Sale.png?v=1742820638&width=750"
+              src="https://as2.ftcdn.net/jpg/03/64/77/41/1000_F_364774110_jT8aIxPfIT6QOMngnpm9qHDxfoJebfMB.jpg"
               alt="Design 1"
               className="transition-transform duration-300 hover:scale-110 hover:animate-pulse rounded"
             />
@@ -23,7 +23,7 @@ function Home() {
 
           <div className="flex-1 bg-pink-50 border p-4">
             <img
-              src="https://chombooka.com/cdn/shop/collections/Banner_2000_by_600_winter_collection.webp?v=1751954022&width=750"
+              src="https://as2.ftcdn.net/jpg/03/64/77/41/1000_F_364774110_jT8aIxPfIT6QOMngnpm9qHDxfoJebfMB.jpg"
               alt="Design 2"
               className="transition-transform duration-300 hover:scale-110 hover:animate-pulse rounded"
             />
