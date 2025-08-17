@@ -3,36 +3,47 @@ import { FiHeart } from "react-icons/fi";
 import { BsCartPlus } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import API from "../api";
+import Loader from "../SmallCompmonent/loader";
+
+
+
+
+
+
+
+
 
 function Shop() {
-  const [products, setProducts] = useState([]);     // ✅ साफ नाम
+  const [products, setProducts] = useState([]);     
   const [sortOrder, setSortOrder] = useState("");
   const [budgetFilter, setBudgetFilter] = useState("");
+  const [loader , setLoader] = useState(true)
 
-  // ✅ प्राइस को number में बदलने का सुरक्षित helper
+
+
   const toNumber = (value) => {
     return parseInt(String(value).replace(/[₹,]/g, ""), 10) || 0;
   };
 
-  // ✅ पेज लोड पर products fetch
   useEffect(() => {
     const fetchAll = async () => {
       try {
-        const res = await API.get("/product"); // baseURL=/api, server=/api/product -> OK
-        // res.data ideally array होना चाहिए
-        setProducts(Array.isArray(res.data) ? res.data : []);
+        const res = await API.get("/product"); 
+         setProducts(Array.isArray(res.data) ? res.data : []);
       } catch (error) {
         console.error("Fetch products error:", error?.response?.data || error);
-        alert("Data fetch नहीं हो पाई");
-      }
+        alert("Data fetch not properly");
+      } finally {
+        setLoader(false)
+       }
     };
     fetchAll();
   }, []);
 
+    if(loader) {
+      return <Loader />
+    }
 
-
-
-  // ✅ फ़िल्टर + सॉर्ट
   const filteredProducts = products
     .filter((item) => {
       const priceNum = toNumber(item.price);

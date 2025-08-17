@@ -4,12 +4,17 @@ import { BsCartPlus } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import API from "./api";
 import Cate from "./user/categori";
+import { Audio } from 'react-loader-spinner';
+import Loader from "./SmallCompmonent/loader";
+
+
+
 
 
 function ChildrenProducts() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
-
+const [loading, setLoading] = useState(true);
 
 
   const toNumber = (value) => {
@@ -22,14 +27,23 @@ function ChildrenProducts() {
     const fetchData = async () => {
       try {
         const response = await API.get("/product");
+        
+         if (!response) return <h3>Loading...</h3>;
+
         setProducts(response.data);
       } catch (error) {
         console.log(error);
         alert("Error fetching products");
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
   }, []);
+
+   if (loading) {
+    return <Loader />; // loader here
+  }
 
   const handleAddToCart = async (item) => {
     const token = localStorage.getItem("token");

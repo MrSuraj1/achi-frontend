@@ -69,6 +69,25 @@ return (
             alt={product.name}
             className="w-[340px] md:ml-[170px]"
           />
+    
+        <div className="flex flex-wrap mt-5 justify-center ">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="float-left w-10 ml-4"
+          />
+          <img
+            src={product.image}
+            alt={product.name}
+            className="float-left w-10  ml-4"
+          />
+          <img
+            src={product.image}
+            alt={product.name}
+            className="float-left w-10  ml-4"
+          />
+         </div>
+                     
         </div>
         <div className="flex-wrap md:flex-1 p-2 w-full ml-4">
           <h1>Achi Creation</h1>
