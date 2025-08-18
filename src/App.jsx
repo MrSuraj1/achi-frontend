@@ -17,7 +17,7 @@ import Checkout from "./user/checkout.jsx";
 import Booked from './user/booked.jsx';
 import Order from './admin/order.jsx';
 import axios from 'axios';
-
+import AddChild from './admin/AddChildProduct.jsx';
 
 
 
@@ -58,6 +58,7 @@ useEffect(() => {
             <Route path="/checkout" element={<Checkout />} />
              <Route path="/booked" element={<Booked />} />
              <Route path="/admin" element={<Order />} />
+             <Route path='/addChild' element={<AddChild />} />
             
               </Routes>
        
