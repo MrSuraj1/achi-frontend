@@ -14,21 +14,31 @@ const [image1 , addImage1] = useState("");
 const [image2 , addImage2] = useState("");
 const [image3 , addImage3] = useState("");
 
-const handle = async () =>{
-const sendData = await API.post('/product/add' , {
-    product,price,star,description,image,image1,image2,image3
-}
-
- 
-);
-alert("product save");
-
-}
+const handle = async (e) => {
+  e.preventDefault(); // stop form reload
+  try {
+    const sendData = await API.post('/product/add', {
+      product,
+      price,
+      star,
+      description,
+      image,
+      image1,
+      image2,
+      image3
+    });
+    console.log("Product Added:", sendData.data);
+    alert("Product added successfully!");
+  } catch (err) {
+    console.error("Add product error:", err.response?.data || err.message);
+    alert("Failed to add product");
+  }
+};
 
 return ( <> 
 
 
-<form action="" method="post" className="flex m-20  p-10 flex-col justify-center border-2 rounded-sm">
+<form action={handle} method="post" className="flex m-20  p-10 flex-col justify-center border-2 rounded-sm">
   <h1 className="text-center text-2xl mt-2 text-blue-950 border-s-blue-300 border-2 p-4">Add Product in child product</h1>
 
 <label className="mt-4">ADD Product Name</label>
@@ -106,9 +116,7 @@ className="border-2 border-red-800 mt-1"></input>
 <br></br>
 
 <button 
-onClick={()=>{
-    handle();
-}}
+type="submit"
 className="bg-green-950 text-white w-32 p-4 items-center justify-center flex hover:bg-red-700">Add button</button>
 
 

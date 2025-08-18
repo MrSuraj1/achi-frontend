@@ -45,27 +45,27 @@ export default function Cate() {
   const product = [
     {
       id: 1,
-      src: "./src/img/us.jpg",
+      src: "/img/us.jpg",
       age: "1-2 year",
     },
     {
       id: 2,
-      src: "./src/img/us.jpg",
+      src: "/img/us.jpg",
       age: "2-4 year",
     },
     {
       id: 3,
-      src: "./src/img/us.jpg",
+      src: "/img/us.jpg",
       age: "4-6 year",
     },
     {
       id: 4,
-      src: "./src/img/us.jpg",
+      src: "/img/us.jpg",
       age: "6-12 year",
     },
     {
       id: 5,
-      src: "./src/img/us.jpg",
+      src: "/img/us.jpg",
       age: "12-16 year",
     },
      
