@@ -80,7 +80,7 @@ export default function Cate() {
         {product.map((item) => (
           <div key={item.id} className="m-2 md:w-60 grid-cols-2">
             <img
-              className="md:w-[200px] rounded-2xl"
+              className="md:w-[600px] rounded-2xl mt-3"
               src={item.src}
               alt={`Kids ${item.age}`}
             />
