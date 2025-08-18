@@ -45,27 +45,27 @@ export default function Cate() {
   const product = [
     {
       id: 1,
-      src: "https://chombooka.com/cdn/shop/collections/2-3-years-kids-ilmybrother-green-fullsleeve2-chombooka-original-imag9ahh23hh4qss.webp?v=1700407719&width=750",
+      src: "./src/img/us.jpg",
       age: "1-2 year",
     },
     {
       id: 2,
-      src: "https://chombooka.com/cdn/shop/collections/2-3-years-kids-ilmybrother-green-fullsleeve2-chombooka-original-imag9ahh23hh4qss.webp?v=1700407719&width=750",
+      src: "./src/img/us.jpg",
       age: "2-4 year",
     },
     {
       id: 3,
-      src: "https://chombooka.com/cdn/shop/collections/2-3-years-kids-ilmybrother-green-fullsleeve2-chombooka-original-imag9ahh23hh4qss.webp?v=1700407719&width=750",
+      src: "./src/img/us.jpg",
       age: "4-6 year",
     },
     {
       id: 4,
-      src: "https://chombooka.com/cdn/shop/collections/2-3-years-kids-ilmybrother-green-fullsleeve2-chombooka-original-imag9ahh23hh4qss.webp?v=1700407719&width=750",
+      src: "./src/img/us.jpg",
       age: "6-12 year",
     },
     {
       id: 5,
-      src: "https://chombooka.com/cdn/shop/collections/2-3-years-kids-ilmybrother-green-fullsleeve2-chombooka-original-imag9ahh23hh4qss.webp?v=1700407719&width=750",
+      src: "./src/img/us.jpg",
       age: "12-16 year",
     },
      
@@ -80,7 +80,7 @@ export default function Cate() {
         {product.map((item) => (
           <div key={item.id} className="m-2 md:w-60 grid-cols-2">
             <img
-              className="md:w-[400px] rounded"
+              className="md:w-[200px] rounded-2xl"
               src={item.src}
               alt={`Kids ${item.age}`}
             />
