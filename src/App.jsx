@@ -18,6 +18,7 @@ import Booked from './user/booked.jsx';
 import Order from './admin/order.jsx';
 import axios from 'axios';
 import AddChild from './admin/AddChildProduct.jsx';
+import Pagenot from './user/pageNot.jsx';
 
 
 
@@ -59,7 +60,7 @@ useEffect(() => {
              <Route path="/booked" element={<Booked />} />
              <Route path="/admin" element={<Order />} />
              <Route path='/addChild' element={<AddChild />} />
-            
+            <Route path='*' element={<Pagenot />} />
               </Routes>
        
        <Footer />
