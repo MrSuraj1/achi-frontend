@@ -21,6 +21,9 @@
 //     age:"1-2 year"
 //   }
 // ]
+
+import { Link } from "react-router-dom";
+
   
 //     return (
 //     <>
@@ -79,11 +82,11 @@ export default function Cate() {
       <div className="grid grid-cols-2  md:flex flex-wrap">
         {product.map((item) => (
           <div key={item.id} className="m-2 md:w-60 grid-cols-2">
-            <img
+    <Link to='/componet/Shop'>       <img
               className="md:w-[600px] rounded-2xl mt-3"
               src={item.src}
               alt={`Kids ${item.age}`}
-            />
+            /> </Link> 
             <p className="text-center">{item.age}</p>
           </div>
         ))}

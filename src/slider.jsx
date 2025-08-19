@@ -44,7 +44,7 @@ function Slider() {
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-cover"
+            className="md:w-full md:h-full object-cover w-full h-full"
           />
           
         </div>

@@ -64,7 +64,7 @@ function Navbar() {
         {/* right Desktop Menu */}
         <ul className="flex flex-wrap float-left md:flex space-x-3 text-gray-700 font-medium">
           <li>
-   {  token ? <button className='bg-black text-white'
+   {  token ? <button className='bg-black text-white p-1 rounded-lg hover:bg-white hover:text-black'
      onClick={logout}
    >Logout </button> : <Link to="user/login" className="hover:text-pink-600 cursor-pointer"><img className='h-9' src='https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png' /></Link>  }           
           </li>
@@ -89,6 +89,20 @@ function Navbar() {
           <Link to="componet/Shop" ><li className="mt-2 hover:text-pink-600">Shop</li></Link> 
           <Link to="componet/about" ><li className="mt-2 hover:text-pink-600">About</li></Link>
          <Link to="https://www.meesho.com/qyysl?_ms=3.0.1" ><li className="mt-2 hover:text-pink-600">Meesho</li></Link>
+            
+         <li class="relative group">
+      <button class="hover:text-gray-300 flex items-center">
+        Kids
+        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <ul class="absolute hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg mt-2 w-40">
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Full selvee</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Half Selvee</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Year wise</a></li>
+      </ul>
+    </li>
            </ul>
       )}
     </nav>
