@@ -148,7 +148,9 @@ setPreview(res.data.img)
           <br />
 
           {/* Colors */}
-          <label htmlFor="colour">Colour :</label>
+          <label
+          className="text-xl font-semibold"
+          htmlFor="colour">Colour :</label>
           <input className="mr-2 ml-2 w-24 border px-2" value={color} readOnly />
           <button
             className="bg-red-600 w-7 h-7 ml-2 rounded-full"
@@ -172,7 +174,7 @@ setPreview(res.data.img)
             <summary>Size chart</summary>
             <img
               className="w-96 mt-4"
-              src="https://i.shgcdn.com/16740b45-1a8c-4179-b129-cde7a895f082/-/format/auto/-/preview/3000x3000/-/quality/lighter/"
+              src="https://images.meesho.com/images/products/538291173/kns83_512.avif?width=512"
               alt="Size chart"
             />
           </details>

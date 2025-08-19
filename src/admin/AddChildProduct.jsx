@@ -18,7 +18,7 @@ function AddChild() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // ❗ prevent page reload
+    e.preventDefault();
     try {
       const response = await API.post("/product/add", form);
       alert("✅ Product saved successfully");
