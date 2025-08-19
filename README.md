@@ -1,12 +1,117 @@
-# React + Vite
+🛍️ Achiwear – Modern E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Achiwear is a full-stack e-commerce web application built with React, Tailwind CSS, Node.js, Express, and MongoDB.
+It allows users to browse products, add to cart, place orders, and manage authentication with JWT.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🖥️ Responsive UI with Tailwind CSS
 
-## Expanding the ESLint configuration
+🔐 User Authentication (Signup/Login with JWT)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛒 Add to Cart / Remove from Cart
+
+📦 Order Management
+
+🖼️ Multiple Product Images with Preview
+
+🌐 Deployed on Netlify (Frontend) & Render (Backend)
+🚀 Features
+
+🖥️ Responsive UI with Tailwind CSS
+
+🔐 User Authentication (Signup/Login with JWT)
+
+🛒 Add to Cart / Remove from Cart
+
+📦 Order Management
+
+🖼️ Multiple Product Images with Preview
+
+🌐 Deployed on Netlify (Frontend) & Render (Backend)
+
+📸 Screenshots
+🏠 Homepage
+
+🛒 Product Page
+
+🛍️ Cart Page
+
+🔐 Authentication
+
+🛠️ Tech Stack
+
+Frontend:
+
+React.js
+
+Tailwind CSS
+
+Axios
+
+React Router DOM
+
+Backend:
+
+Node.js
+
+Express.js
+
+MongoDB with Mongoose
+
+JWT Authentication
+
+Deployment:
+
+Frontend → Netlify
+
+Backend → Render
+
+
+🌐 Deployment
+
+Frontend: Netlify Link
+
+Backend: Render API
+
+👨‍💻 Author
+
+Developed by Suraj
+ ✨
+
+
+--> Project Not complete and Some Change Occur in project 
+
+--> This project not free for use ....
+
+--> Client based Project 
+
+
+ ### 🏠 Homepage  
+![Homepage](./screenshots/home.png)  
+
+
+### 🛒 Product Page  
+![Product Page](./screenshots/shop.JPG)  
+
+
+### 🛍️ Cart Page  
+![Cart](./screenshots/cart.JPG)  
+
+
+### 🔐 Authentication  
+![Login](./screenshots/login.JPG)  
+
+
+### 🛍️ CheckOut  
+![CheckOut](./screenshots/checkout.JPG)
+
+
+### 🛒 About  
+![About](./screenshots/about.JPG)  
+
+
+
+### 🛒 Order   
+![Order](./screenshots/ordersu.JPG)  
+
