@@ -138,10 +138,14 @@ setPreview(res.data.img)
             id="size"
             className="text-xl mt-2 w-20 ml-4 border-[2px]"
           >
-            <option>XS</option>
-            <option>XL</option>
-            <option>L</option>
-            <option>M</option>
+            <option>2-3 Years</option>
+            <option>4-5 Years</option>
+            <option>6-7 Years</option>
+            <option>8-9 Years</option>
+            <option>10-11 Years</option>
+            <option>12-13 Years</option>
+            <option>14-15 Years</option>
+                   
           </select>
 
           <br />
@@ -161,12 +165,12 @@ setPreview(res.data.img)
             className="bg-black w-7 h-7 ml-2 rounded-full"
           ></button>
           <button
-            onClick={() => setColor("green")}
-            className="bg-green-900 w-7 h-7 ml-2 rounded-full"
+            onClick={() => setColor("White")}
+            className="bg-white w-7 h-7 ml-2 rounded-full border-[1px] border-black"
           ></button>
           <button
-            onClick={() => setColor("blue")}
-            className="bg-blue-900 w-7 h-7 ml-2 rounded-full"
+            onClick={() => setColor("Pink")}
+            className="bg-pink-700 w-7 h-7 ml-2 rounded-full"
           ></button>
 
           {/* Size Chart */}
