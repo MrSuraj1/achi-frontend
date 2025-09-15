@@ -77,28 +77,32 @@ const [loading, setLoading] = useState(true);
     }
   };
 
-  return (
-    <div className="px-4 py-10 bg-pink-50">
-      <Cate></Cate>
-    <br></br>
- <br></br>
-      <h2 className="text-3xl font-bold mb-6  text-center">Children Products</h2>
+return (
+  <div className="px-4 py-10 bg-pink-50">
+    <Cate />
+    <br />
+    <br />
+    <h2 className="text-3xl font-bold mb-6 text-center">Children Products</h2>
+
+    {/* show loader only when products.length === 0 */}
+    {products.length === 0 && loading ? (
+      <Loader />
+    ) : (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {products.map((item) => (
-          <div
-            key={item._id}
-            className="bg-white shadow-md rounded-lg overflow-hidden"
-          >
-            <Link to={`../product/${item._id}`} >  <div className="relative">
+          <div key={item._id} className="bg-white shadow-md rounded-lg overflow-hidden">
+            <Link to={`../product/${item._id}`}>
+              <div className="relative">
                 <img
-                src={item.image}
-                alt={item.name}
-                className="h-52 object-cover lg:ml-[50px]"
-              />
-              <button className="absolute top-3 right-3 text-gray-600 hover:text-red-500 text-xl">
-                <FiHeart />
-              </button>
-            </div></Link>
+                  src={item.image}
+                  alt={item.name}
+                  className="h-52 object-cover lg:ml-[50px]"
+                />
+                <button className="absolute top-3 right-3 text-gray-600 hover:text-red-500 text-xl">
+                  <FiHeart />
+                </button>
+              </div>
+            </Link>
             <div className="p-4">
               <h3 className="text-xl font-semibold">{item.name}</h3>
               <p className="text-pink-600 font-bold mt-1">₹{toNumber(item.price)}</p>
@@ -113,8 +117,9 @@ const [loading, setLoading] = useState(true);
           </div>
         ))}
       </div>
-    </div>
-  );
+    )}
+  </div>
+);
 }
 
 export default ChildrenProducts;
